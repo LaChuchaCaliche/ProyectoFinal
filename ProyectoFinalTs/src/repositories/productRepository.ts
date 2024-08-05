@@ -12,8 +12,8 @@ export default class ProductRepository {
         return await Product.findByPk(id);
     }
 
-    async findByUserId(userId: number) {
-        return await Product.findAll({ where: { userId } });
+    async findByUserId(id: number) {
+        return await Product.findAll();
     }
 
     async create(product: CreationAttributes<Product>) {

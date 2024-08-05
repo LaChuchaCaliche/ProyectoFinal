@@ -8,6 +8,7 @@ import {
     HasMany,
   } from "sequelize-typescript";
   import { Product } from './product';
+import { orders } from "./orders";
   
   @Table({
     tableName: "users",
@@ -36,4 +37,6 @@ import {
   
     @HasMany(() => Product)
     products!: Product[];
+    @HasMany(()=>orders)
+    orders!:orders[];
   }
